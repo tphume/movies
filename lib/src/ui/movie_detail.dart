@@ -1,8 +1,30 @@
 import 'package:flutter/material.dart';
 
 class MovieDetail extends StatefulWidget {
+  int id;
+  String title;
+  String overview;
+  String posterPath;
+  double voteAverage;
+  String releaseDate;
+
+  MovieDetail(
+      {this.id,
+      this.title,
+      this.overview,
+      this.posterPath,
+      this.voteAverage,
+      this.releaseDate});
+
   @override
-  _MovieDetailState createState() => _MovieDetailState();
+  _MovieDetailState createState() => _MovieDetailState(
+        id: id,
+        title: title,
+        overview: overview,
+        posterPath: posterPath,
+        voteAverage: voteAverage,
+        releaseDate: releaseDate,
+      );
 }
 
 class _MovieDetailState extends State<MovieDetail> {
