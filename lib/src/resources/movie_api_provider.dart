@@ -20,7 +20,7 @@ class MovieApiProvider {
     }
   }
 
-  Future<Trailer> fetchTrailer(int movieId) async {
+  Future<Trailer> fetchTrailers(int movieId) async {
     final response =
         await client.get('$baseUrl/$movieId/videos?api_key=$apiKey');
 

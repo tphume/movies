@@ -8,6 +8,6 @@ class Repository {
 
   Future<Item> fetchAllMovies() async => movieApiProvider.fetchMovieList();
 
-  Future<Trailer> fetchTrailer(int movieId) async =>
-      movieApiProvider.fetchTrailer(movieId);
+  Future<Trailer> fetchTrailers(int movieId) async =>
+      movieApiProvider.fetchTrailers(movieId);
 }
