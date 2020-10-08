@@ -53,7 +53,7 @@ class _MovieDetailState extends State<MovieDetail> {
           headerSliverBuilder: (context, innerBoxIsScrolled) {
             return [
               SliverAppBar(
-                expandedHeight: 200.0,
+                expandedHeight: 250.0,
                 floating: false,
                 pinned: true,
                 elevation: 0.0,
