@@ -9,7 +9,7 @@ part of 'trailer.dart';
 Trailer _$TrailerFromJson(Map<String, dynamic> json) {
   return Trailer(
     json['id'] as int,
-    (json['result'] as List)
+    (json['results'] as List)
         ?.map((e) =>
             e == null ? null : Result.fromJson(e as Map<String, dynamic>))
         ?.toList(),
@@ -18,7 +18,7 @@ Trailer _$TrailerFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$TrailerToJson(Trailer instance) => <String, dynamic>{
       'id': instance.id,
-      'result': instance.result?.map((e) => e?.toJson())?.toList(),
+      'results': instance.results?.map((e) => e?.toJson())?.toList(),
     };
 
 Result _$ResultFromJson(Map<String, dynamic> json) {

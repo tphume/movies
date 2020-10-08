@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/item.dart';
 import '../blocs/movies.dart';
 
+import '../blocs/movie_detail_bloc_provider.dart';
 import '../ui/movie_detail.dart';
 
 class MovieList extends StatefulWidget {
@@ -67,13 +68,15 @@ class _MovieListState extends State<MovieList> {
     Navigator.push(context, MaterialPageRoute(builder: (context) {
       final result = data.results[index];
 
-      return MovieDetail(
-        id: result.id,
-        title: result.title,
-        overview: result.overview,
-        posterPath: result.posterPath,
-        voteAverage: result.voteAverage,
-        releaseDate: result.releaseDate,
+      return MovieDetailBlocProvider(
+        child: MovieDetail(
+          id: result.id,
+          title: result.title,
+          overview: result.overview,
+          posterPath: result.posterPath,
+          voteAverage: result.voteAverage,
+          releaseDate: result.releaseDate,
+        ),
       );
     }));
   }

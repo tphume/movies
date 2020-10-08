@@ -5,9 +5,9 @@ part 'trailer.g.dart';
 @JsonSerializable(explicitToJson: true)
 class Trailer {
   int id;
-  List<Result> result;
+  List<Result> results;
 
-  Trailer(this.id, this.result);
+  Trailer(this.id, this.results);
 
   factory Trailer.fromJson(Map<String, dynamic> json) =>
       _$TrailerFromJson(json);
